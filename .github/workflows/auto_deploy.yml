@@ -25,6 +25,7 @@ jobs:
       uses: actions/setupt-node@v2-beta
       with:
         node-version: 12
+
     - name: Installing Node Modules
       run: npm install
       
@@ -34,6 +35,7 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Installing Surge
       run: npm install -g surge
+    
     - name: Deploying Website on Surge
       run: surge ./build http://mhbootcampreact.surge.sh/ --token {{ secrets.SURGE_TOKEN }} 
         echo Add other actions to build,
