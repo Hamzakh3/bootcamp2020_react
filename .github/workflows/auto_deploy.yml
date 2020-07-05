@@ -37,6 +37,6 @@ jobs:
       run: npm install -g surge
     
     - name: Deploying Website on Surge
-      run: surge ./build http://mhbootcampreact.surge.sh/ --token {{ secrets.SURGE_TOKEN }} 
+      run: surge ./build http://mhbootcampreact.surge.sh/ --token ${{ secrets.SURGE_TOKEN }} 
         echo Add other actions to build,
         echo test, and deploy your project.
